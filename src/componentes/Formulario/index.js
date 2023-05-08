@@ -4,7 +4,7 @@ import ListaSuspensa from '../ListaSuspensa';
 import Botao from '../Botao';
 import { useState } from 'react';
 
-const Formulario = () => {
+const Formulario = (props) => {
     const oficinas = [
         'Amor de Cristo refletido em Missões',
         'Amor de Cristo refletido em relacionamentos amorosos',
@@ -16,7 +16,10 @@ const Formulario = () => {
 
     const aoSalvar = (e) => {
         e.preventDefault()
-        alert(`form submeted => ${nome} da oficina ${oficina}`)
+        props.aoInscritoCadastrado({
+            nome: nome,
+            oficina: oficina
+        })
     }
 
     return (

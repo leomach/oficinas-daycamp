@@ -10,7 +10,7 @@ const ListaSuspensa = (props) => {
             <select onChange={aoDigitar} value={props.value} required={props.obrigatorio}>
                 <option value="" data-default disabled selected>Selecione uma oficina.</option>
                 {props.itens.map(item => {
-                    return <option key={item}>{item}</option>
+                    return <option key={item.nome}>{item.nome}</option>
                 })}
             </select>
         </div>

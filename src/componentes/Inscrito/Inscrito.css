@@ -1,0 +1,14 @@
+.inscrito {
+    background-color: #fff;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.inscrito h4 {
+    margin: 0;
+}
+
+.inscrito h5 {
+    margin: 0;
+}

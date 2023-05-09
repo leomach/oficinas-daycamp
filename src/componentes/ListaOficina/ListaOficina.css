@@ -1,0 +1,17 @@
+.lista-oficina {
+    text-align: center;
+    padding: 32px;
+}
+
+.lista-oficina h3 {
+    color: #fff;
+    font-size: 20px;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.lista-oficina .inscritos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}

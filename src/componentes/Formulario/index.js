@@ -5,11 +5,7 @@ import Botao from '../Botao';
 import { useState } from 'react';
 
 const Formulario = (props) => {
-    const oficinas = [
-        'Amor de Cristo refletido em Missões',
-        'Amor de Cristo refletido em relacionamentos amorosos',
-        'Amor de Cristo para com pecadores'
-    ]
+    const oficinas = props.oficinas
 
     const [nome, setNome] = useState('')
     const [oficina, setOficina] = useState('')
@@ -26,6 +22,7 @@ const Formulario = (props) => {
         <section className='formulario'>
             <form onSubmit={aoSalvar}>
                 <h2>Preencha os dados para fazer sua inscrição.</h2>
+                <p>Você pode escolher apenas uma oficina. Após se inscrever, não tente fazer novamente, para não ocupar a vaga do irmão.</p>
                 <CampoTexto valor={nome} aoAlterado={valor => setNome(valor)} label="Nome Completo" obrigatorio={true} placeholder="Digite seu nome." />
                 <ListaSuspensa valor={oficina} aoAlterado={valor => setOficina(valor)} label="Oficina" obrigatorio={true} itens={oficinas} />
                 <Botao>Inscrever-se</Botao>

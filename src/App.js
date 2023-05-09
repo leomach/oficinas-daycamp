@@ -1,33 +1,33 @@
-import { useState } from 'react';
-import Banner from './componentes/Banner';
-import Formulario from './componentes/Formulario';
-import axios from 'axios';
-import Mensage from './componentes/Mensage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Inscritos from './pages/Inscritos';
 
 function App() {
-  const [inscritos, setInscritos] = useState([])
-  const [mensage, setMensage] = useState(``)
-
-  const aoNovoInscritoAdicionado = (inscrito) => {
-    setInscritos([...inscritos, inscrito])
-    
-    axios.post("https://quartajovembe-raphaelvictor27.b4a.run/", inscrito).then((response) => {
-      var inscritoString = `Ótimo, ${inscrito.nome}!  Você foi inscrito na oficina: ${inscrito.oficina}!`
-      setMensage(inscritoString)
-      console.log(response)
-    }).catch((err) => {
-      var errorMensage = `Algo deu errado na sua inscrição... O erro foi: ${err}`
-      setMensage(errorMensage)
-      console.error(err)
-    });
-  }
+  const oficinas = [
+    {
+      nome: 'Amor de Cristo refletido em Missões',
+      corPrimaria: '#17a697',
+      corSecundaria: '#17a997',
+    },
+    {
+      nome: 'Amor de Cristo refletido em relacionamentos amorosos',
+      corPrimaria: '#3791a6',
+      corSecundaria: '#3791a6'
+    },
+    {
+      nome: 'Amor de Cristo para com pecadores',
+      corPrimaria: '#2b558c',
+      corSecundaria: '#2b558c'
+    }
+  ]
 
   return (
-    <div className="App">
-      <Banner />
-      <Formulario aoInscritoCadastrado={inscrito => aoNovoInscritoAdicionado(inscrito)} />
-      <Mensage mensage={mensage} />
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home oficinas={oficinas}/>} />
+        <Route path='/inscritos' element={<Inscritos oficinas={oficinas}/>}/>
+      </Routes>
+    </Router>
   );
 }
 

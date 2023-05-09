@@ -8,19 +8,6 @@
     overflow: hidden;
 }
 
-.cabecalho {
-    width: 100vw;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    padding-top: 30px;
-    padding-left: 30px;
-}
-
-.logo {
-    width: 100px;
-}
-
 .titulo {
     display: flex;
     flex-direction: column;

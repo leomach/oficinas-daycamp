@@ -10,7 +10,7 @@ const Home = (props) => {
   const [message, setMessage] = useState(``)
   const aoNovoInscritoAdicionado = (inscrito) => {
     //https://quartajovembe-raphaelvictor27.b4a.run/
-    axios.post("http://localhost:8080/", inscrito).then((response) => {
+    axios.post("https://backend-oficinas-daycamp.vercel.app", inscrito).then((response) => {
       var inscritoString = `Ótimo, ${inscrito.nome}!  Você foi inscrito na oficina: ${inscrito.oficina}!`
       setMessage(inscritoString)
       console.log(response)

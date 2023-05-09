@@ -9,7 +9,7 @@ const Inscritos = (props) => {
     const [inscritos, setInscritos] = useState([])
   
     useEffect(() => {
-      axios.get('http://localhost:8080/').then((res) => {
+      axios.get('https://backend-oficinas-daycamp.vercel.app').then((res) => {
           setInscritos(res.data)
       })
     }, [])

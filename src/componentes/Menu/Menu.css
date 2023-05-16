@@ -5,6 +5,7 @@
     justify-content: flex-start;
     padding: 30px;
     background-color: #420d8c;
+    overflow: hidden;
 }
 
 .logo {

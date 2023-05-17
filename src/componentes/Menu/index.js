@@ -8,9 +8,9 @@ const Menu = () => {
                 <Link to={'/'} >
                     <button>Inscreva-se</button>
                 </Link>
-                <Link to={'/inscritos'} >
+                {/* <Link to={'/inscritos'} >
                     <button>Inscritos</button>
-                </Link>
+                </Link> */}
             </div>
     )
 }

@@ -1,6 +1,7 @@
 .lista-oficina {
     text-align: center;
     padding: 32px;
+    min-height: 600px;
 }
 
 .lista-oficina h3 {

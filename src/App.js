@@ -12,13 +12,13 @@ function App() {
     {
       nome: 'Amor de Cristo refletido em relacionamentos amorosos',
       corPrimaria: '#3791a6',
-      corSecundaria: '#3791a6'
-    },
-    {
-      nome: 'Amor de Cristo para com pecadores',
-      corPrimaria: '#2b558c',
-      corSecundaria: '#2b558c'
-    }
+      corSecundaria: '#3791a6'}
+    // },
+    // {
+    //   nome: 'Amor de Cristo para com pecadores',
+    //   corPrimaria: '#2b558c',
+    //   corSecundaria: '#2b558c'
+    // }
   ]
 
   return (

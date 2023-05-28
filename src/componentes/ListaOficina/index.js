@@ -5,7 +5,7 @@ const ListaOficina = (props) => {
     const css = { backgroundColor: props.corPrimaria }
 
     return (
-        <section className='lista-oficina' style={css}>
+        props.inscritos.length > 0 && <section className='lista-oficina' style={css}>
             <h3>{props.oficina}</h3>
             <div className='inscritos'>
                 {props.inscritos

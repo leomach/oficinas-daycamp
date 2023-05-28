@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import ListaOficina from "../../componentes/ListaOficina";
 import Menu from "../../componentes/Menu";
+import './inscritos.css'
 
 const Inscritos = (props) => {
     const oficinas = props.oficinas
@@ -15,7 +16,7 @@ const Inscritos = (props) => {
     }, [])
 
     return (
-        <div>
+        <div className='inscritos-page'>
             <Menu />
             {oficinas.map(oficina => <ListaOficina
             key={oficina.nome} 

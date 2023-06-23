@@ -15,6 +15,7 @@ const Inscritos = (props) => {
       })
     }, [])
 
+
     return (
         <div className='inscritos-page'>
             <Menu />

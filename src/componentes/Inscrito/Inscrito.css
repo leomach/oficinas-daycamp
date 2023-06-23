@@ -1,4 +1,5 @@
 .inscrito {
+    position: relative;
     background-color: #fff;
     padding: 5px 20px;
     margin-bottom: 10px;
@@ -11,4 +12,10 @@
 
 .inscrito h5 {
     margin: 0;
+}
+
+.deletar {
+    position: absolute;
+    right: -10px;
+    top: -10px;
 }
